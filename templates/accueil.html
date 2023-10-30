@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body>
+        <div class="body">
+            <nav>
+                <div class="nav_logo">
+                    {{ svg_logo }}
+                </div>
+                <div class="nav_button">
+                    <a href="../">
+                        <div class="nav_button_text">Accueil</div>
+                    </a>
+                </div>
+                <div class="nav_button">
+                    <a href="../render_map">
+                        <div class="nav_button_text">Carte</div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </body>
+</html>

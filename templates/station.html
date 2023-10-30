@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body>
+        <div class="body">
+            <nav>
+                <div class="nav_logo">
+                    {{ svg_logo }}
+                </div>
+                <div class="nav_button">
+                    <a href="../">
+                        <div class="nav_button_text">Accueil</div>
+                    </a>
+                </div>
+                <div class="nav_button">
+                    <a href="../render_map">
+                        <div class="nav_button_text">Carte</div>
+                    </a>
+                </div>
+            </nav>
+            <center>
+                <h1 class="station_name">{{ data["name"] }}</h1>
+                <br>
+                {{ info_bulle | safe }}
+                <br>
+                <hr style="width:50%;height:2px;border-width:0;color:gray;background-color:gray">
+                <br>
+                <div>
+                    <img src="data:image/png;base64,{{ velib_electric_logo }}" width=3% style="vertical-align:middle">
+                    <span style="font-size: 20px; padding: 13px;">{{ data["ebike"] }} vélib(s) électrique(s)</span>
+                </div>
+                <br>
+                <div>
+                    <img src="data:image/png;base64,{{ velib_mecanic_logo }}" width=3% style="vertical-align:middle">
+                    <span style="font-size: 20px; padding: 13px;">{{ data["mechanical"] }} vélib(s) mécanique(s)</span>
+                </div>
+                <br>
+                <hr style="width:50%;height:2px;border-width:0;color:gray;background-color:gray">
+                <br>
+                <span style="font-size: 20px; padding: 10px;">Stations vélibs disponibles : {{ data["numdocksavailable"] }}</span>
+                <br>
+                <br>
+                <span style="font-size: 20px; padding: 10px;">Nombre de vélos disponibles : {{ data["numbikesavailable"] }}</span>
+                <br>
+                <br>
+                <span style="font-size: 20px; padding: 10px;">Capacité : {{ data["capacity"] }}</span>
+                <br>
+                <hr style="width:50%;height:2px;border-width:0;color:gray;background-color:gray">
+                <br>
+                <h2>Données de la station sur la journée :</h2>
+                <br>
+                <img src="data:image/png;base64,{{ figure_bikes }}">
+                <br>
+                <br>
+                <img src="data:image/png;base64,{{ figure_available_bikes_and_place }}">
+                <br>
+                <br>
+                <hr style="width:50%;height:2px;border-width:0;color:gray;background-color:gray">
+                <br>
+                <h2>Données de la station en globalité :</h2>
+                <br>
+                <span style="font-size: 20px; padding: 10px;">Taux de disponibilité des vélos de la station : {{ taux_disponibilite_velo }}%</span>
+                <br>
+                <br>
+                <span style="font-size: 20px; padding: 10px;">Taux de disponibilité des places de vélos de la station : {{ taux_disponibilite_place }}%</span>
+                <br>
+                <br>
+                <span style="font-size: 20px; padding: 10px;">Taux d'ouverture de la station : {{ taux_ouverture }}%</span>
+            <center>
+        </div>
+    </body>
+</html>

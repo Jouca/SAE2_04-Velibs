@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(246, 246, 246);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+
+.body {
+    background-color: rgb(246, 246, 246);
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+nav {
+    margin: auto;
+    background-color: #00AA91;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.nav_button {
+    display: inline-block;
+    width: 2vw;
+    margin: 0 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.nav_logo {
+    width: 15%;
+    height: 15%;
+}
+
+.nav_button :hover {
+    background-color: #006153;
+    color: white;
+}
+
+.nav_button_text {
+    padding-top: 9px;
+    color: white;
+}
+
+.station_name {
+    text-decoration: underline;
+}
